@@ -1,0 +1,30 @@
+$accordion-label-button-margin: 0;
+$accordion-item-margin: .75rem 0;
+$accordion-items-margin: 0 0 1rem;
+
+$font-size-xs: 13px;
+$font-size-s: 15px;
+$font-size-m: 17px;
+$font-size-l: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 28px;
+$font-size-xxxl: 36px;
+
+h1 {
+    font-size: $font-size-xxxl;
+    margin: 10px 0 20px;
+}
+
+h2 {
+    font-size: $font-size-xxl;
+    margin: 10px 0 20px;
+}
+
+h3 {
+    font-size: $font-size-xl;
+    margin: 10px 0 20px;
+}
+
+p {
+    font-size: $font-size-m;
+}

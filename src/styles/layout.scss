@@ -1,0 +1,96 @@
+
+$max-desktop-width: 1200px;
+$max-mobile-width: 480px;
+$max-tablet-width: 960px;
+
+$container-padding: 5px;
+$section-padding: 15px 20px;
+
+// mixins
+
+
+// layouts
+.container {
+    display: block;
+    position: relative;
+}
+
+.section {
+    padding: $section-padding;
+}
+
+
+// grid columns
+.columns {
+    width: 100%;
+    display: inline-flex;
+}
+
+.column {
+    contain: content;
+    box-sizing: border-box;
+}
+
+// grid increments
+// mobile grid
+// desktop grid
+.is-2 {
+    width: 20%;
+}
+
+.is-3 {
+    width: 33.3333%;
+}
+
+.is-4 {
+    width: 40%;
+}
+
+.is-5 {
+    width: 50%;
+}
+
+.is-6 {
+    width: 66.6666%;
+}
+
+.is-7 {
+    width: 70%;
+}
+
+.is-8 {
+    width: 80%;
+}
+
+.is-9 {
+    width: 90%;
+}
+
+.is-full {
+    width: 100%;
+}
+
+// alignment
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.center-align {
+    text-align: center;
+}
+
+// spacing
+
+.gap-5 {
+    margin: 5px 10px;
+}
+
+.gap-10 {
+    margin: 10px 20px;
+}
+
