@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
 
 Vue.use(Router);
 
@@ -20,6 +19,11 @@ export default new Router({
       path: '/layout/:id',
       name: 'layout',
       component: () => import('@/views/Layouts.vue')
+    },
+    {
+      path: '/images/:id',
+      name: 'images',
+      component: () => import('@/views/Icons.vue')
     },
     {
       path: '/about',

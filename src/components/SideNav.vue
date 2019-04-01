@@ -41,7 +41,7 @@ export default class SideNav extends Vue {
             showItems: false,
             items: [
                 {
-                    label: 'Buttons',
+                    label: 'Actions',
                     action: '/components/buttons'
                 },
                 {
@@ -79,12 +79,16 @@ export default class SideNav extends Vue {
             ]
         },
         {
-            label: 'Icons',
+            label: 'Images',
             showItems: false,
             items: [
                 {
                     label: 'Icons',
-                    action: 'icons'
+                    action: '/images/icons'
+                },
+                {
+                    label: 'Logos',
+                    action: '/images/logos'
                 }
             ]
         },

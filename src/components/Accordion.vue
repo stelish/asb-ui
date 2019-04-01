@@ -5,7 +5,9 @@
         <div class="a-accordion-label" v-bind.sync="item" v-on:click="toggleItem(item)">
             <a href="#">{{item.label}}
                 <span class="down-arrow">
-                    ^
+                    <svg viewBox="192 26 14 9" id="icon-arrow-down" width="100%" height="100%">
+                        <path stroke="currentColor" stroke-width="1.5" fill="none" d="M204.89 27l-5.938 6L193 27.067"></path>
+                    </svg>
                 </span>
             </a>
         </div>
@@ -62,11 +64,21 @@
         }
 
         .down-arrow {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
+            float: right;
+            line-height: 100%;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+            line-height: 50px;
+            position: relative;
+            height: 50px;
+            box-sizing: border-box;
 
+            svg {
+            width: 14px;
+            height: 9px;
+            }
+        }
     }
 
 </style>

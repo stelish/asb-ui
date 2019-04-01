@@ -1,0 +1,103 @@
+@import '@/styles/variables.scss';
+
+$checkbox-font-size: 1.125rem;
+$checkbox-tick-font-size: 1.25rem;
+$checkbox-label-weight: 500;
+$checkbox-tick-label-weight: 700;
+
+a {
+    color: $default-asb-blue;
+    background: transparent;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button[role='checkbox'],
+button[role='radio'], {
+
+    padding: 0;
+    min-width: 0;
+    white-space: normal;
+    text-align: initial;
+    outline: none;
+    background-color: transparent !important;
+    color: $default-asb-grey !important;
+    padding: .5em !important;
+    margin: 0 !important;
+    position: relative !important;
+
+    input {
+        position: absolute;
+        left: -99999px;
+    }
+
+    [type='checkbox'] + label,
+    [type='radio'] + label {
+        display: inline-block;
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+        margin-bottom: 0;
+        vertical-align: baseline;
+    }
+    
+    [type='checkbox'] + label {
+
+        padding-left: 15px;
+        text-align: left;
+        cursor: pointer;
+        font-size: $checkbox-font-size;
+        font-weight: $checkbox-label-weight;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 17px;
+            height: 17px;
+            border: 2px solid #616161;
+        }
+
+        :checked {
+            &:after {
+                content: '\2713';
+                position: absolute;
+                top: 10px;
+                left: 2px;
+                font-size: $checkbox-tick-font-size;
+                line-height: 0.8;
+                color: $default-asb-yellow;
+                font-weight: $checkbox-tick-label-weight;
+                transition: all .2s;
+            }
+        }
+
+    }
+
+    [type='radio'] + label {
+        padding-left: 15px;
+        text-align: left;
+        cursor: pointer;
+        font-size: $checkbox-font-size;
+        font-weight: $checkbox-label-weight;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 17px;
+            height: 17px;
+            border: 2px solid #616161;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+

@@ -1,5 +1,18 @@
+@import '@/styles/typography.scss';
+
 $default-header-color: #000;
 $default-text-colour: #fff;
 $default-asb-yellow: #fcbd1b;
 $default-asb-blue: #0064ac;
+$default-asb-grey: #424242;
 $default-sidnav-background-colour: #262626;
+
+$white: $default-text-colour;
+$light-grey: #eee;
+
+$default-button-font-size: 1em;
+
+// paddings
+$default-button-padding: .75em 1.666667em;
+
+$default-max-action-width: 200px;

@@ -47,6 +47,7 @@ export default class Header extends Vue {
     vertical-align: middle;
     width: 20%;
     padding: 0;
+    line-height: 50px;
 }
 
 .header {
