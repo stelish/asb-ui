@@ -9,10 +9,19 @@ $default-sidnav-background-colour: #262626;
 
 $white: $default-text-colour;
 $light-grey: #eee;
+$mid-grey: #ccc;
+$black: #000;
+
+// todo: come up with better way to set inverse / alt styling
+// maybe in layout
+$asb-alt-background: $default-header-color;
 
 $default-button-font-size: 1em;
 
 // paddings
 $default-button-padding: .75em 1.666667em;
+
+// margins
+$default-container-margin: 0 0 50px;
 
 $default-max-action-width: 200px;

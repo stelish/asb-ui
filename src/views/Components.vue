@@ -84,7 +84,7 @@
     </div>
 
     <div class="container">
-        <h2>Dropdowns</h2>
+        <h2>Select box</h2>
 
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -92,21 +92,47 @@
 
         <AsbSelectBox :options="ddOptions" :placeholder="'Asb select box'"></AsbSelectBox>
 
-        <select placeholder="default">
-            <option>default</option>
-            <option>alt</option>
-            <option>yellow</option>
-        </select>
+        <p>Code mirror:</p>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <div class="container">
+        <h2>Breadcrumbs</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <h4>Standard:</h4>
+        <AsbBreadcrumbs :items="breadcrumbs"></AsbBreadcrumbs>
+
+        <h4>Alt:</h4>
+        <AsbBreadcrumbs :items="breadcrumbs" :alt="true"></AsbBreadcrumbs>
+
+        <p>Code mirror:</p>
+    </div>
+
+    <!-- Nav dropdown -->
+    <div class="container">
+        <h2>Nav items</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <div class="navbar">
+            <div style="display:inline-flex;">
+                            <AsbNavDropdown :options="navItems" :label="'items:'"></AsbNavDropdown>
+            <AsbNavDropdown :options="navItems" :label="'extras:'"></AsbNavDropdown>
+            <AsbNavDropdown :options="navItems" :label="'priorities:'"></AsbNavDropdown>
+            </div>
+
+        </div>
 
         <p>Code mirror:</p>
     </div>
 
     <div class="container">
-        <h2>Breadcrumbs</h2>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <h2>Selectbox</h2>
         <p>Code mirror:</p>
     </div>
 
@@ -114,7 +140,12 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/styles/layout.scss';
 @import '@/styles/buttons.scss';
+
+.container {
+    margin: $default-container-margin;
+}
 </style>
 
 <script lang="ts">
@@ -138,7 +169,18 @@ import TickIcon from '@/components/icons/tick.vue';
 import SmallAsbLogo from '@/components/logos/small-asb-logo.vue';
 import AsbCheckBox from '@/components/actions/AsbCheckBox.vue';
 import AsbRadioButton from '@/components/actions/AsbRadioButton.vue';
-import AsbSelectBox,{ AsbSelectBoxItem } from '@/components/actions/AsbSelectBox.vue';
+
+import AsbSelectBox, {
+    AsbSelectBoxItem
+} from '@/components/actions/AsbSelectBox.vue';
+
+import AsbBreadcrumbs, {
+    AsbBreadcrumb
+} from '@/components/nav/AsbBreadcrumbs.vue';
+
+import AsbNavDropdown, {
+    AsbNavDropdownItem
+} from '@/components/nav/AsbNavDropdown.vue';
 
 import {
     Component,
@@ -167,13 +209,15 @@ import {
         AsbCheckBox,
         AsbRadioButton,
         AsbSelectBox,
+        AsbBreadcrumbs,
+        AsbNavDropdown,
     }
 })
 export default class ComponentsPage extends Vue {
-    private rbPicked:boolean = false;
-    private cb1Checked:boolean = false;
+    private rbPicked: boolean = false;
+    private cb1Checked: boolean = false;
     private aTagCode = '<a href="#">link text</a>';
-    private cmOptions:any = {
+    private cmOptions: any = {
         tabSize: 2,
         mode: 'text/typescript',
         theme: 'base16-dark',
@@ -181,8 +225,7 @@ export default class ComponentsPage extends Vue {
         line: true,
     };
 
-    private ddOptions:AsbSelectBoxItem[] = [
-        {
+    private ddOptions: AsbSelectBoxItem[] = [{
             label: 'option 1',
             value: '1'
         },
@@ -196,15 +239,51 @@ export default class ComponentsPage extends Vue {
         }
     ]
 
+    private breadcrumbs: AsbBreadcrumb[] = [{
+            label: 'item 1',
+            action: '/item1'
+        },
+        {
+            label: 'item 2',
+            action: '/item2'
+        }
+    ];
+
+    private navItems: AsbNavDropdownItem[] = [{
+            label: 'item 1',
+            action: 'item 1'
+        },
+        {
+            label: 'item 2',
+            action: 'item 2'
+        },
+        {
+            label: 'item 3',
+            action: 'item 3'
+        },
+    ];
+
     constructor() {
         super();
     }
 
-    toggleCb():void {
-        this.cb1Checked=!this.cb1Checked;
+    toggleCb(): void {
+        this.cb1Checked = !this.cb1Checked;
         console.log(this.cb1Checked);
     }
 
+    getFakeNavItems(item:string):AsbNavDropdownItem[] {
+        let i = 0;
+        let arr:AsbNavDropdownItem[] = [];
+        while(i < arr.length){
+            arr.push({
+                label: `${item} ${i}`,
+                action: `${item} ${i}`
+            });
+            i++;
+        }
+        return arr;
+    }
 
 }
 </script>

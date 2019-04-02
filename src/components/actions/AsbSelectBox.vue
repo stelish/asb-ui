@@ -1,7 +1,7 @@
 <template>
   <div class="asb-select-box">
-    <button>
-      {{placeholder}}
+    <button v-on:click="toggleDD()">
+      {{ getLabel() }}
       <span class="down-arrow">
         <svg viewBox="192 26 14 9" id="icon-arrow-down" width="100%" height="100%">
           <path
@@ -13,9 +13,11 @@
         </svg>
       </span>
     </button>
-    <div class="asb-select-dd">
+    <div class="asb-select-dd" v-if="showDD">
       <ul>
-        <li v-bind.sync="options" v-for="(item, index) in options" :key="index">{{item.label}}</li>
+        <li v-bind.sync="options" v-for="(item, index) in options" :key="index" v-on:click="setOption(item)">
+          {{item.label}}
+        </li>
       </ul>
     </div>
   </div>
@@ -30,6 +32,7 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  contain: content;
 }
 
 .asb-select-box {
@@ -88,7 +91,6 @@ ul {
 
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
-
 import ArrowDownIcon from "@/components/icons/arrow-down.vue";
 
 @Component({
@@ -97,8 +99,23 @@ import ArrowDownIcon from "@/components/icons/arrow-down.vue";
   }
 })
 export default class AsbSelectBox extends Vue {
-  @Prop() private options!: any[];
+  @Prop() private options!: AsbSelectBoxItem[];
   @Prop() private placeholder: string = "please choose";
+  private showDD:boolean = false;
+  private selectedOption!:AsbSelectBoxItem;
+
+  private setOption(item:AsbSelectBoxItem):void {
+    this.selectedOption = item;
+    this.toggleDD();
+  }
+
+  private toggleDD():void {
+    this.showDD=!this.showDD;
+  }
+
+  private getLabel():string {
+    return this.selectedOption ? this.selectedOption.label : this.placeholder;
+  }
 }
 
 export interface AsbSelectBoxItem {

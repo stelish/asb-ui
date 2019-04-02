@@ -1,3 +1,4 @@
+@import '@/styles/variables.scss';
 
 $max-desktop-width: 1200px;
 $max-mobile-width: 480px;
@@ -19,6 +20,13 @@ $section-padding: 15px 20px;
     padding: $section-padding;
 }
 
+.navbar {
+    position: relative;
+    min-width: fit-content;
+    min-height: 60px;
+    background-color: $default-header-color;
+    color: $default-text-colour;
+}
 
 // grid columns
 .columns {
