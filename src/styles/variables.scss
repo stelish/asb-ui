@@ -2,9 +2,11 @@
 
 $default-header-color: #000;
 $default-text-colour: #fff;
+$default-standard-text-color: #000; // todo: replace this with $default-text-color and create new $default-alt-text-color
 $default-asb-yellow: #fcbd1b;
 $default-asb-blue: #0064ac;
 $default-asb-grey: #424242;
+$default-asb-light-grey: #f6f7fb;
 $default-sidnav-background-colour: #262626;
 
 $white: $default-text-colour;

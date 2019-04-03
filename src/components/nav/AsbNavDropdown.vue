@@ -1,8 +1,8 @@
 <template>
 <div class="asb-nav-dd">
-    <div class="asb-nav-dd-inner">
+    <div class="asb-nav-dd-inner" v-on:click="toggleDD()">
         <p class="asb-nav-dd-label">{{label}}</p>
-            <button v-on:click="toggleDD()">
+            <button>
         {{ getOptionsLabel() }}
             <ArrowDownIcon :small="true"/>
         </button>
@@ -55,6 +55,7 @@ ul {
         background: transparent;
         border: none;
         outline: none;
+        cursor: pointer;
 
         .down-arrow {
             margin-left: 30px;

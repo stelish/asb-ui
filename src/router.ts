@@ -11,9 +11,29 @@ export default new Router({
       component: require('@/views/Home.vue').default,
     },
     {
+      path: '/overview',
+      name: 'overview',
+      component: require('@/views/Overview.vue').default,
+    },
+    {
+      path: '/overview/:id',
+      name: 'overview',
+      component: require('@/views/Overview.vue').default,
+    },
+    {
       path: '/components/:id',
       name: 'components',
       component: () => import('@/views/Components.vue')
+    },
+    {
+      path: '/colours',
+      name: 'colours',
+      component: () => import('@/views/Colours.vue')
+    },
+    {
+      path: '/colours/:id',
+      name: 'colours',
+      component: () => import('@/views/Colours.vue')
     },
     {
       path: '/layout/:id',

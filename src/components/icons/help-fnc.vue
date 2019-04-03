@@ -1,5 +1,5 @@
 <template>
-        <span class="icon">
+        <span class="icon" v-bind:class="{'small':small}">
         <svg viewBox="0 0 19.001 26.002" id="icon-help-fnc" width="100%" height="100%" fill="currentColor">
           <path
             d="M17.915 10.036H1.085c-.6 0-1.085.467-1.085 1.04v13.888c0 .574.486 1.038 1.086 1.038h16.83c.598 0 1.085-.464 1.085-1.038v-13.89c0-.57-.485-1.038-1.084-1.038zm-7.884 9.912V22H8.97v-2.058C7.615 19.672 6.593 18.46 6.593 17c0-1.657 1.315-3 2.938-3s2.94 1.343 2.94 3c0 1.482-1.056 2.705-2.44 2.948z"
@@ -20,9 +20,12 @@
 
 import {
     Component,
-    Vue
+    Vue,
+    Prop
 } from 'vue-property-decorator';
 
 @Component
-export default class HelpFncIcon extends Vue {}
+export default class HelpFncIcon extends Vue {
+  @Prop() small!:boolean;
+}
 </script>

@@ -1,9 +1,15 @@
+@import '@/styles/variables.scss';
+
 .icon {
 
     &.small {
         svg {
-            width: 14px;
-            height: 9px;
+            width: 10px;
+            height: 14px;
+            vertical-align: middle;
+            margin-left: 4px;
+            margin-bottom: .375em;
+            margin-top: .125em;
         }
     }
 
@@ -27,6 +33,10 @@
         svg {
             transform: rotate(180deg);
         }
+    }
+
+    &.alt {
+        color: $default-standard-text-color;
     }
 
 }

@@ -31,13 +31,13 @@
         <div class="container">
             <h3>Buttons with icons</h3>
             <button>
-                default with icon <HelpFncIcon></HelpFncIcon>
+                default with icon <HelpFncIcon :small="true" />
             </button>
             <button class="alt">
-                alt with icon <HelpFncIcon></HelpFncIcon>
+                alt with icon <HelpFncIcon :small="true" />
             </button>
             <button class="yellow">
-                yellow with icon <HelpFncIcon></HelpFncIcon>
+                yellow with icon <HelpFncIcon :small="true" />
             </button>
             <p>Code mirror:</p>
         </div>

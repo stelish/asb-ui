@@ -9,9 +9,24 @@
         <HelpFncIcon></HelpFncIcon>
         <HelpChangeIcon></HelpChangeIcon>
         <HelpTopupIcon></HelpTopupIcon>
-        <ArrowDownIcon></ArrowDownIcon>
 
-        <TickIcon></TickIcon>
+        <ArrowDownIcon />
+        <ArrowUpIcon />
+        <ArrowRightIcon />
+        <ArrowLeftIcon />
+
+        <TickIcon />
+        <BellIcon />
+        <CloseIcon />
+        <ClockIcon />
+        <CircularIphoneIcon />
+        <CircularPercentageIcon />
+        <IdVerifiedIcon />
+        <GuidesIcon />
+        <CalculatorIcon />
+        <PersonIcon />
+        <GetALoanIcon />
+        <SaveMoneyIcon />
     </div>
 
     <div class="container">
@@ -70,7 +85,21 @@ import HelpFncIcon from '@/components/icons/help-fnc.vue';
 import HelpChangeIcon from '@/components/icons/help-change.vue';
 import HelpTopupIcon from '@/components/icons/help-topup.vue';
 import ArrowDownIcon from '@/components/icons/arrow-down.vue';
+import ArrowUpIcon from '@/components/icons/arrow-up.vue';
+import ArrowRightIcon from '@/components/icons/arrow-right.vue';
+import ArrowLeftIcon from '@/components/icons/arrow-left.vue';
 import TickIcon from '@/components/icons/tick.vue';
+import BellIcon from '@/components/icons/bell.vue';
+import CloseIcon from '@/components/icons/close.vue';
+import ClockIcon from '@/components/icons/clock.vue';
+import CircularIphoneIcon from '@/components/icons/circular-iphone.vue';
+import CircularPercentageIcon from '@/components/icons/circular-percentage.vue';
+import IdVerifiedIcon from '@/components/icons/icon-id-verified.vue';
+import GuidesIcon from '@/components/icons/guides.vue';
+import CalculatorIcon from '@/components/icons/calculator.vue';
+import PersonIcon from '@/components/icons/person.vue';
+import GetALoanIcon from '@/components/icons/get-a-loan-icon.vue';
+import SaveMoneyIcon from '@/components/icons/save-money.vue';
 
 import SmallAsbLogo from '@/components/logos/small-asb-logo.vue'
 
@@ -97,7 +126,21 @@ import {
         HelpTopupIcon,
         SmallAsbLogo,
         ArrowDownIcon,
+        ArrowRightIcon,
+        ArrowLeftIcon,
+        ArrowUpIcon,
         TickIcon,
+        BellIcon,
+        CloseIcon,
+        ClockIcon,
+        CircularIphoneIcon,
+        CircularPercentageIcon,
+        IdVerifiedIcon,
+        GuidesIcon,
+        CalculatorIcon,
+        PersonIcon,
+        GetALoanIcon,
+        SaveMoneyIcon
     }
 })
 export default class Icons extends Vue {

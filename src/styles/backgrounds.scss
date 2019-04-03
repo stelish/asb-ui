@@ -1,0 +1,26 @@
+@import '@/styles/variables.scss';
+
+.brand-gold-bg {
+    background-color: $default-asb-yellow;
+    color: $black;
+}
+
+.brand-blue-bg {
+    background-color: $default-asb-blue;
+    color: $white;
+}
+
+.brand-grey-bg {
+    background-color: $default-asb-grey;
+    color: $white;
+}
+
+.brand-dark-grey-bg {
+    background-color: $default-sidnav-background-colour;
+    color: $white;
+}
+
+.brand-light-grey-bg {
+    background-color: $default-asb-light-grey;
+    color: $black;
+}

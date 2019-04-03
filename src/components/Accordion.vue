@@ -4,11 +4,7 @@
 
         <div class="a-accordion-label" v-bind.sync="item" v-on:click="toggleItem(item)">
             <a href="#">{{item.label}}
-                <span class="down-arrow">
-                    <svg viewBox="192 26 14 9" id="icon-arrow-down" width="100%" height="100%">
-                        <path stroke="currentColor" stroke-width="1.5" fill="none" d="M204.89 27l-5.938 6L193 27.067"></path>
-                    </svg>
-                </span>
+                <ArrowDownIcon :small="true" />
             </a>
         </div>
 
@@ -85,20 +81,23 @@
 
 <script lang="ts">
 import {Component,Prop,Vue,Emit, Watch} from 'vue-property-decorator';
+import ArrowDownIcon from '@/components/icons/arrow-down.vue';
 
 export interface AccordionInnerItem {
     label:string,
-    showItems:boolean,
     action:any
 }
 
 export interface AccordionItems {
     label:string,
+    showItems?:boolean,
     items:AccordionInnerItem[]
 }
 
 @Component({
-    components: {},
+    components: {
+        ArrowDownIcon
+    },
     template: ''
 })
 export default class Accordion extends Vue {

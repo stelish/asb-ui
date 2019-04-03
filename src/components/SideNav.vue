@@ -19,7 +19,31 @@ export default class SideNav extends Vue {
     accordionItems:AccordionItems[] = 
     [
         {
+            label: 'Design Principles',
+            showItems: true,
+            items: [
+                {
+                    label: 'Overview',
+                    action: '/overview'
+                },
+                {
+                    label: 'Getting started',
+                    action: '/overview/getting-started'
+                },
+                {
+                    label: 'Accessibility',
+                    action: '/overview/accessibility'
+                },
+                {
+                    label: 'Internationalisation',
+                    action: '/overview/internationalisation'
+                },
+            ]
+        },
+
+        {
             label: 'Layout',
+            showItems: false,
             items: [
                 {
                     label: 'Grid',
@@ -34,7 +58,6 @@ export default class SideNav extends Vue {
                     action: '/layout/spacing'
                 }
             ],
-            showItems: false
         },
         {
             label: 'Components',
@@ -74,7 +97,7 @@ export default class SideNav extends Vue {
             items: [
                 {
                     label: 'Brand Colours',
-                    action: 'colours'
+                    action: '/colours/brand'
                 }
             ]
         },

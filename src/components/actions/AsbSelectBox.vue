@@ -2,16 +2,8 @@
   <div class="asb-select-box">
     <button v-on:click="toggleDD()">
       {{ getLabel() }}
-      <span class="down-arrow">
-        <svg viewBox="192 26 14 9" id="icon-arrow-down" width="100%" height="100%">
-          <path
-            stroke="currentColor"
-            stroke-width="1.5"
-            fill="none"
-            d="M204.89 27l-5.938 6L193 27.067"
-          ></path>
-        </svg>
-      </span>
+      <ArrowDownIcon :small="true" v-if="!showDD"/>
+      <ArrowUpIcon :alt="true" :small="true" v-if="showDD"/>
     </button>
     <div class="asb-select-dd" v-if="showDD">
       <ul>
@@ -27,12 +19,24 @@
 @import "@/styles/variables.scss";
 
 $select-height: 50px;
+$button-padding: 0 0.75em;
+$border-bottom: solid 1px $light-grey;
+$button-min-width: 125px;
+$dropdown-zindex: 100;
+$icon-zindex: 101;
 
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
   contain: content;
+}
+
+.icon {
+    position: absolute;
+    z-index: $icon-zindex;
+    right: 0.75em;
+    top: 0px;
 }
 
 .asb-select-box {
@@ -43,44 +47,32 @@ ul {
   position: relative;
 
   button {
-    padding: 0 0.75em;
+    padding: $button-padding;
     vertical-align: middle;
     display: table-cell;
     line-height: $select-height;
     font-size: $font-size-m;
     background-color: $default-asb-grey;
     color: $white;
-
-    .down-arrow {
-      margin-left: 30px;
-      float: right;
-      line-height: $select-height;
-      height: $select-height;
-      font-size: $font-size-m;
-      position: relative;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-
-      svg {
-        width: 14px;
-        height: 9px;
-      }
-    }
+    outline: none;
+    min-width: $button-min-width;
+    text-align: left;
   }
 }
 
 .asb-select-dd {
-  border: solid 1px $light-grey;
+  border: $border-bottom;
   position: absolute;
   background-color: $white;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: $dropdown-zindex;
 
   li {
     width: 100%;
-    padding: $default-button-padding;
-    border-bottom: solid 1px $light-grey;
+    padding: 0.75em;
+    border-bottom: $border-bottom;
 
     &:hover {
       background-color: $light-grey;
@@ -92,15 +84,16 @@ ul {
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 import ArrowDownIcon from "@/components/icons/arrow-down.vue";
+import ArrowUpIcon from "@/components/icons/arrow-up.vue";
 
 @Component({
   components: {
-    ArrowDownIcon
+    ArrowDownIcon,ArrowUpIcon
   }
 })
 export default class AsbSelectBox extends Vue {
   @Prop() private options!: AsbSelectBoxItem[];
-  @Prop() private placeholder: string = "please choose";
+  @Prop() private placeholder: string = "";
   private showDD:boolean = false;
   private selectedOption!:AsbSelectBoxItem;
 
@@ -114,7 +107,7 @@ export default class AsbSelectBox extends Vue {
   }
 
   private getLabel():string {
-    return this.selectedOption ? this.selectedOption.label : this.placeholder;
+    return this.selectedOption ? this.selectedOption.label : this.options.length ? this.options[0].label : ''; // no need for place holder
   }
 }
 
