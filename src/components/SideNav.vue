@@ -28,7 +28,11 @@ export default class SideNav extends Vue {
                 },
                 {
                     label: 'Getting started',
-                    action: '/overview/getting-started'
+                    action: '/getting-started'
+                },
+                {
+                    label: 'Design tokens',
+                    action: '/design-tokens'
                 },
                 {
                     label: 'Accessibility',
@@ -82,12 +86,16 @@ export default class SideNav extends Vue {
             showItems: false,
             items: [
                 {
+                    label: 'Scale',
+                    action: '/typography/scale'
+                },
+                {
                     label: 'Heading',
-                    action: '/heading'
+                    action: '/typography/heading'
                 },
                 {
                     label: 'Caption',
-                    action: '/caption'
+                    action: '/typography/caption'
                 }
             ]
         },

@@ -1,5 +1,5 @@
 <template>
-  <div class="left-align">
+  <div class="content left-align">
     <h1>Home</h1>
   </div>
 </template>

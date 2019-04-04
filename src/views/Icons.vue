@@ -1,5 +1,5 @@
 <template>
-<div class="left-align">
+<div class="content left-align section">
     <h1>Icons</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -25,8 +25,7 @@
         <GuidesIcon />
         <CalculatorIcon />
         <PersonIcon />
-        <GetALoanIcon />
-        <SaveMoneyIcon />
+
     </div>
 
     <div class="container">
@@ -49,6 +48,11 @@
         <PinBranchIcon></PinBranchIcon>
         <CallColourIcon></CallColourIcon>
         <HelpAppIcon></HelpAppIcon>
+        <GetALoanIcon />
+        <SaveMoneyIcon />
+        <GrowMoneyIcon />
+        <EverydayBankingIcon />
+        <CurrencyIcon />
 
     </div>
 
@@ -100,6 +104,9 @@ import CalculatorIcon from '@/components/icons/calculator.vue';
 import PersonIcon from '@/components/icons/person.vue';
 import GetALoanIcon from '@/components/icons/get-a-loan-icon.vue';
 import SaveMoneyIcon from '@/components/icons/save-money.vue';
+import GrowMoneyIcon from '@/components/icons/grow-money.vue';
+import EverydayBankingIcon from '@/components/icons/everyday-banking.vue';
+import CurrencyIcon from '@/components/icons/currency.vue';
 
 import SmallAsbLogo from '@/components/logos/small-asb-logo.vue'
 
@@ -140,7 +147,10 @@ import {
         CalculatorIcon,
         PersonIcon,
         GetALoanIcon,
-        SaveMoneyIcon
+        SaveMoneyIcon,
+        GrowMoneyIcon,
+        EverydayBankingIcon,
+        CurrencyIcon
     }
 })
 export default class Icons extends Vue {

@@ -10,21 +10,42 @@ $font-size-xl: 24px;
 $font-size-xxl: 28px;
 $font-size-xxxl: 36px;
 
+$font-line-height-xxxl: 1.25; 
+
+$heading-margin-l: 10px 0 20px;
+$heading-margin-m: 10px 0;
+$heading-margin-s: 5px 0;
+
 h1 {
     font-size: $font-size-xxxl;
-    margin: 10px 0 20px;
+    margin: $heading-margin-l;
+    line-height: $font-line-height-xxxl;
 }
 
 h2 {
     font-size: $font-size-xxl;
-    margin: 10px 0 20px;
+    margin: $heading-margin-l;
 }
 
 h3 {
     font-size: $font-size-xl;
-    margin: 10px 0 20px;
+    margin: $heading-margin-m;
+}
+
+h4 {
+    font-size: $font-size-l;
+    margin: $heading-margin-s;
 }
 
 p {
     font-size: $font-size-m;
+    margin: $heading-margin-s;
+}
+
+small {
+    font-size: $font-size-s;
+}
+
+label {
+    font-size: $font-size-xs;
 }

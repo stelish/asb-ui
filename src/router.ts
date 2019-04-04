@@ -11,6 +11,16 @@ export default new Router({
       component: require('@/views/Home.vue').default,
     },
     {
+      path: '/getting-started',
+      name: 'getting-started',
+      component: require('@/views/GettingStarted.vue').default,
+    },
+    {
+      path: '/design-tokens',
+      name: 'design-tokens',
+      component: require('@/views/DesignTokens.vue').default,
+    },
+    {
       path: '/overview',
       name: 'overview',
       component: require('@/views/Overview.vue').default,
@@ -21,8 +31,18 @@ export default new Router({
       component: require('@/views/Overview.vue').default,
     },
     {
+      path: '/typography',
+      name: 'typography',
+      component: require('@/views/Typography.vue').default,
+    },
+    {
+      path: '/typography/:id',
+      name: 'typography item',
+      component: require('@/views/Typography.vue').default,
+    },
+    {
       path: '/components/:id',
-      name: 'components',
+      name: 'components item',
       component: () => import('@/views/Components.vue')
     },
     {
@@ -32,7 +52,7 @@ export default new Router({
     },
     {
       path: '/colours/:id',
-      name: 'colours',
+      name: 'colours item',
       component: () => import('@/views/Colours.vue')
     },
     {

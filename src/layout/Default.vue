@@ -33,7 +33,7 @@ export default class Default extends Vue {}
 @import '@/styles/layout.scss';
 @import '@/styles/actions.scss';
 
-.section{
+.content{
   margin-top: 60px;
 }
 </style>
