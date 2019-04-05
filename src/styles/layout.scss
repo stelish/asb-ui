@@ -1,4 +1,5 @@
 @import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
 
 $max-desktop-width: 1200px;
 $max-mobile-width: 480px;
@@ -39,39 +40,91 @@ $section-padding: 15px 30px;
     box-sizing: border-box;
 }
 
+.is-2,.is-3,.is-4,.is-5,.is-6,.is-7,.is-8,.is-9 {
+    float: left;
+}
+
 // grid increments
 // mobile grid
 // desktop grid
 .is-2 {
-    width: 20%;
+    width: 100%;
+    @include for-sm-up {
+        width: 40%;
+    }
+    @include for-md-up {
+        width: 20%;
+    }
 }
 
 .is-3 {
-    width: 33.3333%;
+    width: 100%;
+    @include for-sm-up {
+        width: 50%;
+    }
+    @include for-md-up {
+        width: 33.3333%;
+    }
 }
 
 .is-4 {
-    width: 40%;
+    width: 100%;
+    @include for-sm-up {
+        width: 100%;
+    }       
+    @include for-md-up {
+        width: 40%;
+    }
 }
 
 .is-5 {
-    width: 50%;
+    width: 100%;
+    @include for-sm-up {
+        width: 100%;
+    } 
+    @include for-md-up {
+        width: 50%;
+    }
 }
 
 .is-6 {
-    width: 66.6666%;
+    width: 100%;
+    @include for-sm-up {
+        width: 100%;
+    }
+    @include for-md-up {
+        width: 66.6666%;
+    }
 }
 
 .is-7 {
-    width: 70%;
+    width: 100%;
+    @include for-sm-up {
+        width: 100%;
+    }
+    @include for-md-up {
+        width: 70%;
+    }
 }
 
 .is-8 {
-    width: 80%;
+    width: 100%;
+    @include for-sm-up {
+        width: 100%;
+    }
+    @include for-md-up {
+        width: 80%;
+    }
 }
 
 .is-9 {
-    width: 90%;
+    width: 100%;
+    @include for-sm-up {
+        width: 100%;
+    }
+    @include for-md-up {
+        width: 90%;
+    }
 }
 
 .is-full {
@@ -93,7 +146,6 @@ $section-padding: 15px 30px;
 }
 
 // spacing
-
 .gap-5 {
     margin: 5px 10px;
 }
@@ -101,4 +153,6 @@ $section-padding: 15px 30px;
 .gap-10 {
     margin: 10px 20px;
 }
+
+
 

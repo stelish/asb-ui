@@ -55,7 +55,7 @@ export default class SideNav extends Vue {
                 },
                 {
                     label: 'Containers',
-                    action: '/layout/containers'
+                    action: '/containers'
                 },
                 {
                     label: 'Spacing',

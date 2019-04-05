@@ -46,6 +46,11 @@ export default new Router({
       component: () => import('@/views/Components.vue')
     },
     {
+      path: '/containers',
+      name: 'containers',
+      component: () => import('@/views/Containers.vue')
+    },
+    {
       path: '/colours',
       name: 'colours',
       component: () => import('@/views/Colours.vue')

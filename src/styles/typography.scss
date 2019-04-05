@@ -1,3 +1,5 @@
+@import '@/styles/variables.scss';
+
 $accordion-label-button-margin: 0;
 $accordion-item-margin: .75rem 0;
 $accordion-items-margin: 0 0 1rem;
@@ -8,13 +10,15 @@ $font-size-m: 17px;
 $font-size-l: 20px;
 $font-size-xl: 24px;
 $font-size-xxl: 28px;
-$font-size-xxxl: 36px;
+$font-size-xxxl: 2.25em;
 
 $font-line-height-xxxl: 1.25; 
 
 $heading-margin-l: 10px 0 20px;
 $heading-margin-m: 10px 0;
 $heading-margin-s: 5px 0;
+
+$heading-divider-margin-l: 0.75em 0 1.5em;
 
 h1 {
     font-size: $font-size-xxxl;
@@ -48,4 +52,43 @@ small {
 
 label {
     font-size: $font-size-xs;
+}
+
+.header-divider-l {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+        position: relative;
+        width: 100px;
+        height: 2px;
+        margin: $heading-divider-margin-l;
+        background-color: $default-asb-yellow;
+    }
+}
+
+.header-divider-m {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+        position: relative;
+        width: 75px;
+        height: 2px;
+        margin: $heading-divider-margin-l;
+        background-color: $default-asb-yellow;
+    }
+}
+
+.header-divider-s {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+        position: relative;
+        width: 50px;
+        height: 2px;
+        margin: $heading-divider-margin-l;
+        background-color: $default-asb-yellow;
+    }
 }

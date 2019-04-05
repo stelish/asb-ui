@@ -31,8 +31,8 @@
     }
     .a-accordion-item {
         text-align: left;
-        font-size: 2.5rem;
-        line-height: 2.5rem;
+        font-size: $font-size-xxxl;
+        line-height: 2.25rem;
         min-height: 3.75rem;
         position: relative;
         width: 100%;

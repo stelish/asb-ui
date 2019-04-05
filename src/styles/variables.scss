@@ -1,4 +1,4 @@
-@import '@/styles/typography.scss';
+
 
 $default-header-color: #000;
 $default-text-colour: #fff;
@@ -22,8 +22,13 @@ $default-button-font-size: 1em;
 
 // paddings
 $default-button-padding: .75em 1.666667em;
+$default-container-padding: .75em;
 
 // margins
 $default-container-margin: 0 0 50px;
 
+// sizing
 $default-max-action-width: 200px;
+
+// border- radius
+$container-radius: 8px;

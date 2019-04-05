@@ -19,6 +19,7 @@
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
+@import "@/styles/typography.scss";
 
 $select-height: 50px;
 

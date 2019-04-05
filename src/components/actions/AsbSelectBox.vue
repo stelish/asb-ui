@@ -17,6 +17,7 @@
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
+@import "@/styles/typography.scss";
 
 $select-height: 50px;
 $button-padding: 0 0.75em;

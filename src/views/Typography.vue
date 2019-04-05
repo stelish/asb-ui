@@ -1,8 +1,8 @@
 <template>
 <div class="content left-align section">
-    <h1>Typography</h1>
+    <h1 class="header-divider-l">Typography</h1>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
     </p>
 
     <div class="container section">
@@ -20,7 +20,7 @@
                         <h1>h1</h1>
                     </div>
                     <div class="column is-2 layout-container">
-                        <h1>Heading 1</h1>
+                        <h1>Heading</h1>
                     </div>
                     <div class="column is-2 layout-container">
                         <h1>36px</h1>
@@ -39,7 +39,7 @@
                         <h2>h2</h2>
                     </div>
                     <div class="column is-2 layout-container">
-                        <h2>Heading 2</h2>
+                        <h2>Heading</h2>
                     </div>
                     <div class="column is-2 layout-container">
                         <h2>28px</h2>
@@ -58,7 +58,7 @@
                         <h3>h3</h3>
                     </div>
                     <div class="column is-2 layout-container">
-                        <h3>Heading 3</h3>
+                        <h3>Heading</h3>
                     </div>
                     <div class="column is-2 layout-container">
                         <h3>24px</h3>
@@ -77,7 +77,7 @@
                         <h4>h4</h4>
                     </div>
                     <div class="column is-2 layout-container">
-                        <h4>Heading 4</h4>
+                        <h4>Heading</h4>
                     </div>
                     <div class="column is-2 layout-container">
                         <h4>20px</h4>
@@ -150,13 +150,45 @@
         </div>
 
         <div class="">
-            <h4>Example:</h4>
-
+            <div class="code section">
+                {{h1_string}} <br>
+                {{h2_string}} <br>
+                {{h3_string}} <br>
+                {{h4_string}} <br>
+                {{p_string}} <br>
+                {{small_string}} <br>
+                {{label_string}}
+            </div>
         </div>
     </div>
 
 </div>
 </template>
+
+<script lang="ts">
+import {
+    Component,
+    Vue
+} from 'vue-property-decorator';
+
+@Component({
+    components: {
+    },
+})
+export default class Typography extends Vue {
+    constructor() {
+        super();
+    }
+    private h1_string:string = "<h1>Heading</h1>";
+    private h2_string:string = "<h2>Heading</h2>";
+    private h3_string:string = "<h3>Heading</h3>";
+    private h4_string:string = "<h4>Heading</h4>";
+    private p_string:string = '<p>paragraph</p>';
+    private small_string:string = '<small>small tag</small>';
+    private label_string:string = '<label>label tag</label>';
+
+}
+</script>
 
 <style lang="scss" scoped>
 @import '@/styles/layout.scss';
