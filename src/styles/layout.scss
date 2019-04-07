@@ -23,7 +23,12 @@ $section-padding: 15px 30px;
 
 .content-area {
     margin: 0 auto;
-    max-width: $asb-desktop;
+    max-width: $max-desktop-width;
+}
+
+.content-area-thin {
+    margin: 0 auto;
+    max-width: $max-tablet-width;
 }
 
 .navbar {

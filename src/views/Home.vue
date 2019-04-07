@@ -22,7 +22,42 @@
         </div>
 
     </Container>
-    <AsbNavOutline :items="horizontalNavItems"/>
+    <AsbNavOutline :items="horizontalNavItems" />
+    <Container>
+        <div class="content-area-thin">
+
+            <div class="section">
+                <h1 class="header-divider-l">Why use a design system</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button>See more</button>
+            </div>
+
+        </div>
+    </Container>
+
+    <Container colour="light">
+        <div class="content-area-thin">
+
+            <div class="section">
+                <h1 class="header-divider-l">Benefits of a design system</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button>See more</button>
+            </div>
+
+        </div>
+    </Container>
+
+    <Container>
+        <div class="content-area-thin">
+
+            <div class="section">
+                <h1 class="header-divider-l">Toolkit</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button>See more</button>
+            </div>
+
+        </div>
+    </Container>
 </div>
 </template>
 
@@ -35,7 +70,9 @@ import AngledContainer from '@/components/containers/AngledContainer.vue';
 import Container from '@/components/containers/Container.vue';
 import ImageContainer from '@/components/containers/ImageContainer.vue';
 import Header from '@/components/Header.vue'
-import AsbNavOutline,{ AsbNavOutlineItem } from '@/components/nav/AsbNavOutline.vue';
+import AsbNavOutline, {
+    AsbNavOutlineItem
+} from '@/components/nav/AsbNavOutline.vue';
 
 @Component({
     components: {
@@ -52,27 +89,26 @@ export default class Home extends Vue {
         super();
     }
 
-    private horizontalNavItems:AsbNavOutlineItem[] = [
-      {
-        label:'Why use a design system',
-        action: '/why',
-        hero: false
-      },
-      {
-        label:'Benefits of a design system',
-        action: '/benefits',
-        hero: false
-      },
-      {
-        label:'Toolkit',
-        action: '/toolkit',
-        hero: false
-      },
-      {
-        label:'Getting started',
-        action: '/getting-started',
-        hero: true
-      }
+    private horizontalNavItems: AsbNavOutlineItem[] = [{
+            label: 'Why use a design system',
+            action: '/why',
+            hero: false
+        },
+        {
+            label: 'Benefits of a design system',
+            action: '/benefits',
+            hero: false
+        },
+        {
+            label: 'Toolkit',
+            action: '/toolkit',
+            hero: false
+        },
+        {
+            label: 'Getting started',
+            action: '/getting-started',
+            hero: true
+        }
     ]
 }
 </script>
@@ -82,6 +118,22 @@ export default class Home extends Vue {
 @import '@/styles/typography.scss';
 @import '@/styles/buttons.scss';
 $hero-height: 513px;
+
+.content-area-thin {
+    h1 {
+        text-align: center;
+    }
+
+    .header-divider-l {
+        &:after {
+            margin: 0.75em auto 1.5em;
+        }
+    }
+
+    .section {
+        padding: 2.25em 0;
+    }
+}
 
 .home-hero-img {
     height: $hero-height;
@@ -94,26 +146,26 @@ $hero-height: 513px;
 }
 
 .home-hero-content-middle {
-  height: 100%;
-  vertical-align: middle;
-  align-items: center;
-  margin: 1.090909em auto;
+    height: 100%;
+    vertical-align: middle;
+    align-items: center;
+    margin: 1.090909em auto;
 
-  h1 {
-    color: $default-asb-yellow;
-    margin: .4em auto;
-    font-size: 3.75em;
-    line-height: 1.2em;
-  }
+    h1 {
+        color: $default-asb-yellow;
+        margin: .4em auto;
+        font-size: 3.75em;
+        line-height: 1.2em;
+    }
 
-  p {
-    font-size: 1.375em;
-    line-height: 1.363636em;
-  }
+    p {
+        font-size: 1.375em;
+        line-height: 1.363636em;
+    }
 }
 
 .home-hero-content-cta {
-  padding: 1.66666em 0;
-  display: inline-flex;
+    padding: 1.66666em 0;
+    display: inline-flex;
 }
 </style>
