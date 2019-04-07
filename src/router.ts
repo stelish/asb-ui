@@ -9,6 +9,7 @@ export default new Router({
       path: '/',
       name: 'home',
       component: require('@/views/Home.vue').default,
+      meta: {layout: 'no-sidebar-layout'}
     },
     {
       path: '/getting-started',

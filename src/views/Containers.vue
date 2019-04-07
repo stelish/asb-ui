@@ -37,19 +37,45 @@
 
         <div class="section">
             <h3>Section container</h3>
-            <div class="section brand-dark-grey-bg">
+            <Container>
                 <h4>This is a section container</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+            </Container>
+
+            <Container colour="light">
+                <h4>This is a light section container</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </Container>
+
+            <Container colour="dark">
+                <h4>This is a dark section container</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </Container>
+
+            <Container colour="gold">
+                <h4>This is a yellow section container</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </Container>
         </div>
 
         <div class="section">
             <h3>Angled container</h3>
 
-            <AngledContainer colour="dark">
-                <h2>This is angled</h2>
+            <AngledContainer colour="light">
+                <h2>This is light angled container</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </AngledContainer>
+
+            <AngledContainer colour="dark">
+                <h2>This is dark angled container</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </AngledContainer>
+
+            <AngledContainer colour="gold">
+                <h2>This is yellow angled container</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </AngledContainer>
+
         </div>
     </div>
 
@@ -82,6 +108,7 @@
 import Card from '@/components/containers/Card.vue';
 import ImageCard from '@/components/containers/ImageCard.vue';
 import AngledContainer from '@/components/containers/AngledContainer.vue';
+import Container from '@/components/containers/Container.vue';
 
 import {
     Component,
@@ -92,7 +119,8 @@ import {
     components: {
         Card,
         ImageCard,
-        AngledContainer
+        AngledContainer,
+        Container
     },
 })
 export default class Containers extends Vue {

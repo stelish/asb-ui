@@ -1,11 +1,20 @@
 <template>
 <div class="bg-angled-container">
 
-    <div class="bg-angled" v-bind:class="{'brand-dark-grey-bg':colour=='dark'}">
-
-    </div>
-
-    <div class="bg-content container" v-bind:class="{'brand-dark-grey-bg':colour=='dark'}">
+    <div class="bg-angled" 
+    v-bind:class="{
+        'brand-dark-grey-bg':colour==='dark', 
+        'brand-gold-bg':colour==='gold',
+        'brand-blue-bg':colour==='blue',
+        'brand-light-grey-bg':colour==='light'
+    }" />
+    <div class="bg-content container"
+    v-bind:class="{
+        'brand-dark-grey-bg':colour==='dark', 
+        'brand-gold-bg':colour==='gold',
+        'brand-blue-bg':colour==='blue',
+        'brand-light-grey-bg':colour==='light'
+    }">
         <slot></slot>
     </div>
 
@@ -24,11 +33,11 @@
 }
 
 .bg-content {
-    left: 8%;
-    position: absolute;
+    left: 5%;
     z-index: 21;
     width: 45%;
     background-color: transparent !important;
+    padding: 0.75em;
 }
 
 .bg-angled {

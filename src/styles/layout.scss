@@ -21,6 +21,11 @@ $section-padding: 15px 30px;
     padding: $section-padding;
 }
 
+.content-area {
+    margin: 0 auto;
+    max-width: $asb-desktop;
+}
+
 .navbar {
     position: relative;
     min-width: fit-content;
@@ -28,6 +33,14 @@ $section-padding: 15px 30px;
     background-color: $default-header-color;
     color: $default-text-colour;
 }
+
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+ }
 
 // grid columns
 .columns {
